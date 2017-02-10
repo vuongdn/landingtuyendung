@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tuyển dụng - Icheck</title>
+    <!--<link rel="shortcut icon" type="image/png" href="images/logo-favicon.png" />-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css.map">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css.map">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <style type="text/css">
+        body{
+            background-image: url("images/background.jpg");
+
+        }
+
+        .con{
+        display: none;
+        position: relative;
+        width: 960px;
+        height: 464px;
+        margin: 0 auto 40px;
+        background-image: url('images/t1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+        .con.t2 {
+            height: 1176px;
+            background-image: url('images/t2.png');
+        }
+
+        .con.t3 {
+            height: 1312px;
+            background-image: url('images/t3.png');
+        }
+
+        .con.t4 {
+            height: 942px;
+            background-image: url('images/t4.png');
+        }
+
+    </style>
+</head>
+
+<body>
+<!--<img src="images/bg-menu-top.png">-->
+
+<div>
+    <img id="athena-man" src="images/athena-man-banner.png" class="athena">
+    <img id="ares-man" src="images/ares-man-banner.png" class="ares">
+    <img id="shadow-man" src="images/shadow-man-banner.png" class="shadow-man">
+    <img id="shadow-man-text" src="images/shadow-man-text-banner.png" class="shadow-text">
+    <img id="zeus-man" src="images/zeus-man-banner.png" class="zeus">
+    <img id="hecquyn-man" src="images/hecquyn-man-banner.png" class="hecquyn">
+    <img  src="images/logo-banner-top.png" class="logo-icheck">
+</div>
+<img src="images/banner-background-top.png">
+    <nav class="navbar navbar-fixed-top menu-top">
+        <div class="container">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="img4"><img src="images/phone-menu-top.png"></a></li>
+                    <li><p style="color: white;margin-top: 15px;margin-left: 10px">Liên Hệ: 0969696969</p></li>
+                    <li class="img4"><img style="margin-left: 10px" src="images/mail-menu-top.png"></a></li>
+                    <li ><p style="margin-top: 15px;color: white;margin-left: 10px">Mail: 696969@icheck.vn</p></li>
+
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="img2"></li>
+                    <li class="img3"></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="img-center">
+            <img id="con" src="images/t1.png">
+            <img src="images/t2.png">
+            <img src="images/t3.png">
+            <img src="images/t4.png">
+        </div>
+        <input type="text" id="name" size="50px"  placeholder="Họ và tên" style="border: 2px;color:white ;background: none; position: absolute;z-index: 14;top: 4020px;left: 470px">
+        <input type="text" id="phone" size="50px"  placeholder="Số điện thoại" style="border: 2px;color:white ;background: none; position: absolute;z-index: 14;top: 4130px;left: 470px">
+        <input type="text" id="mail" size="50px"  placeholder="Email" style="border: 2px;color:white ;background: none; position: absolute;z-index: 14;top: 4245px;left: 470px">
+
+        <!--<input type="file" id="cv" class="up1">-->
+        <button type="submit" id="btnSend"  class="send-button" onclick="myFunction()"></button>
+
+        <input id="cv" type="file" name="cv" style="display: none;">
+        <button type="button" class="fly-btn" onclick="document.getElementById('cv').click();"></button>
+
+        <!--<img src="images/tai-len-cv.png"  class="form">-->
+        <!--<img src="images/gui-dang-ky.png" class="send">-->
+    </div>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/npm.js"></script>
+<script type="text/javascript" src="jquery-3.1.1.slim.min.js"></script>
+<script>
+    function myFunction() {
+        var c1 = $('#name').val();
+        var c2 = $('#phone').val();
+        var c3 = $('#mail').val();
+        var c4 = $('#cv').val();
+        var s = $('#thiep').val();
+        var content = $('#fb-shared').html();
+
+        if( !c1 ) {
+            alert("Bạn chưa nhập tên của bạn.");
+            return;
+        }
+        if(!c2) {
+            alert("Bạn chưa nhập số điện thoại của bạn.");
+            return;
+        }
+        if(!c3){
+            alert("Bạn chưa nhập email của bạn.");
+            return;
+        }
+        if(!c4){
+            alert("Bạn chưa tải cv của bạn lên.");
+            return;
+        }
+
+    }
+</script>
+<script type="text/javascript">
+    $.fn.extend({
+        animateCss: function (animationName, cb) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('show animated ' + animationName).one(animationEnd, function() {
+                $(this).addClass('ok');
+                $(this).removeClass('animated ' + animationName);
+
+                if (typeof cb === 'function') {
+                    cb();
+                }
+            });
+        }
+    });
+
+    $(document).ready(function () {
+        $('#athena-man').animateCss('slideInLeft', function () {
+            $('#ares-man').animateCss('slideInUp', function () {
+            });
+        });
+        $('#hecquyn-man').animateCss('slideInRight', function () {
+            $('#zeus-man').animateCss('slideInUp', function () {
+                $('#shadow-man').animateCss('fadeIn', function () {
+                    $('#shadow-man-text').animateCss('flash', function () {})
+                })
+            });
+        });
+
+        var cons = $('.con');
+
+        for (let i = 0; i < cons.length; i++) {
+            var con = cons[i];
+
+            if ($(this).scrollTop() + $(window).height() >= $(con).offset().top) {
+                if (!$(con).hasClass('ok') && (i == 0 || $(cons[i - 1]).hasClass('ok'))) {
+                    $(con).animateCss('slideInUp');
+                }
+            }
+        }
+
+        $(document).on('scroll', function () {
+            var self = this;
+            var cons = $('.con');
+
+            for (let i = 0; i < cons.length; i++) {
+                var con = cons[i];
+
+                if ($(this).scrollTop() > $(con).offset().top) {
+
+                    console.log($(this).scrollTop(), $(con).offset().top);
+                    if (!$(con).hasClass('ok') && (i == 0 || $(cons[i - 1]).hasClass('ok'))) {
+                        $(con).animateCss('slideInUp');
+                    }
+                }
+            }
+        });
+//
+//        $('#form').on('submit', function (e) {
+//            if ($('#name').val().trim() == '') {
+//                alert('Bạn phải nhập tên');
+//
+//                return false;
+//            }
+//
+//            if ($('#phone').val().trim() == '') {
+//                alert('Bạn phải nhập số điện thoại');
+//
+//                return false;
+//            }
+//
+//            if ($('#email').val().trim() == '') {
+//                alert('Bạn phải nhập email');
+//
+//                return false;
+//            }
+//        });
+//    });
+//
+//    $('#cv').change(function (e) {
+//        $('.filename').html($(this).val());
+    });
+</script>
+</body>
+</html>
